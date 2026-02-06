@@ -28,7 +28,20 @@ def app():
                 print("What did you say?\n")
 
         elif command.strip().lower() == "h":
-            print("Hello and thanks to use Ferminal\n")
+            print("""| Commands     | Description                                                            | Command Prompt|
+|--------------|------------------------------------------------------------------------|---------------|
+|      h       | Show this help menu                                                    | nothing :V    |
+|      p       | Clear the screen                                                       | cls           |
+|      l       | Show directory                                                         | dir           |
+|      w       | Show working directory or where you are                                | chdir         |
+|      e       | Echo (You know what i mean -_-)                                        | echo          |
+|      d       | Change directory                                                       | cd            |
+|      k       | Make a folder                                                          | mkdir         |
+|      f       | Make a file                                                            | type nul > "" |
+|      m       | Remove the folder or file                                              | Remove        |
+|      v       | Move the folder or file                                                | Move          |
+|      z       | You don't need it -_-                                                  | nothing :V    |
+|      x       | Exit from terminal                                                     | exit          |""")
         
         elif command.strip().lower() == "w":
             wd = os.getcwd() #working directory
