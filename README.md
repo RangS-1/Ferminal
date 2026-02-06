@@ -45,4 +45,4 @@ Examples:
 git clone https://github.com/RangS-1/Ferminal.git
 cd Ferminal
 ```
-3. >> python3 main.py
+3. python3 main.py
