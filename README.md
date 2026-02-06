@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Windows](https://img.shields.io/badge/Platform-Windows%2010+-red?logo=windows&logoColor=white)](https://github.com/RangS-1/RangSpreter)
 
-Ferminal or I like to call it**F*ck Terminal** is a lightweight, Python-based terminal made specifically for Windows users who are tired of typing long commands in Command Prompt or PowerShell.
+Ferminal or I like to call it **F*ck Terminal** is a lightweight, Python-based terminal made specifically for Windows users who are tired of typing long commands in Command Prompt or PowerShell.
 
 Instead of writing long commands repeatedly, just use short **custom aliases** that you define yourself.
 
