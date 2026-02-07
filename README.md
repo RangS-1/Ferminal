@@ -1,6 +1,7 @@
-<p align="center">
-
+<div align="center">
+<a href="github.com/RangS-1/Ferminal">
 <img src="icon.png" alt="Ferminal Icon" width="312" height="272"/>
+</a>
 
 # Ferminal
 
@@ -8,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Windows](https://img.shields.io/badge/Platform-Windows%2010+-red?logo=windows&logoColor=white)](https://github.com/RangS-1/RangSpreter)
 
-</p>
+</div>
 
 Ferminal or I like to call it **F*ck Terminal** is a lightweight, Python-based terminal made specifically for Windows users who are tired of typing long commands in Command Prompt or PowerShell. I really hate terminal but like it. I mean,
 when you use terminal, u need to write 'dir', 'mkdir', 'clear' when that is suck for me.
