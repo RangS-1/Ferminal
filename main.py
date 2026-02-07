@@ -7,6 +7,7 @@ def app():
     print("Ferminal v.1.0")
     print("(c) RangS. All rights reserved\n")
     while True:
+                
         sys.stdout.write("F# ")
         command = input()
 
@@ -45,7 +46,7 @@ def app():
 |      v       | move the folder or file                                                | Move          |
 |      c       | copy file                                                              | copy          |
 |      u       | show content inside a file                                             | type          |
-|      z       | you don't need it -_-                                                  | nothing :V    |
+|      z       | you dont need it -_-                                                   | nothing :V    |
 |      x       | Exit from terminal                                                     | exit          |\n""")
         
         elif command.strip().lower() == "w":
@@ -89,8 +90,31 @@ def app():
         elif command == 'z': # i'm just trolling _:)
             t.sleep(30)
 
+        #installler! you can add something, or maybe you're lazy
+        elif command.startswith("i "):
+            if command[2:] == 'git':
+                os.system("winget install --id Git.Git -e --source winget")
+            elif command[2:] == 'py':
+                os.system("winget install Python.Python.3 -e")
+            elif command[2:] == 'php':
+                os.system("winget install PHP.PHP -e")
+            elif command[2:] == 'composer':
+                os.system("winget install Composer.Composer -e")
+            elif command[2:] == 'jdk':
+                os.system("winget install Oracle.JDK.21 -e")
+            elif command[2:] == 'ojdk':
+                os.system("winget install EclipseAdoptium.Temurin.17.JDK -e")
+            elif command[2:] == 'msql':
+                os.system("winget install Oracle.MySQL -e")
+            elif command[2:] == 'psql':
+                os.system("winget install PostgreSQL.PostgreSQL -e")
+            elif command[2:] == 'xampp':
+                os.system("winget install --id ApacheFriends.Xampp.8.2")
+            else:
+                print("Read Documentation!")
         else:
-            print("Command not found bruh :V\n")
+            os.system(command)
+            print("Done using CMD _:)\n")
 
 
 if __name__ == '__main__':
