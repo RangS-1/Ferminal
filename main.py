@@ -2,13 +2,14 @@ import sys
 import shlex
 import os
 import time as t
+from colorama import Fore
 
 def app():
     print("Ferminal v.1.0")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
-        sys.stdout.write("F# ")
+        sys.stdout.write(Fore.CYAN + "F# " + Fore.WHITE)
         command = input()
 
         try:
@@ -21,7 +22,7 @@ def app():
             print("Bye -_-\n")
             sys.exit(1)
 
-        elif command.strip().startswith("p"):
+        elif command.strip().startswith("b"):
             os.system('cls')
         
         elif command.strip().lower().startswith("e"):
@@ -89,6 +90,9 @@ def app():
 
         elif command == 'z': # i'm just trolling _:)
             t.sleep(30)
+
+        elif command[:2] == 'p ':
+            p = os.system(f'ping {command[2:]}')
 
         #installler! you can add something, or maybe you're lazy
         elif command.startswith("i "):
