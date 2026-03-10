@@ -9,7 +9,7 @@ def app():
     print("(c) RangS. All rights reserved\n")
     while True:
                 
-        sys.stdout.write(Fore.CYAN + "F# " + Fore.WHITE)
+        sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>! " + Fore.WHITE)
         command = input()
 
         try:
@@ -55,7 +55,10 @@ def app():
             print(wd,"\n")
         
         elif command[:2] == "d ":
-            os.chdir(command[2:])
+            if not os.path.exists(command[2:]):
+                print("Directory not found bruh :^\n")
+            else:
+                os.chdir(command[2:])
         
         elif command[:2] == "k ":
             os.mkdir(command[2:])
