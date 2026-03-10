@@ -1,6 +1,6 @@
 <div align="center">
 <a href="github.com/RangS-1/Ferminal">
-<img src="icon.png" alt="Ferminal Icon" width="312" height="272"/>
+<img src="icon.ico" alt="Ferminal Icon" width="312" height="272"/>
 </a>
 
 # Ferminal
@@ -70,4 +70,4 @@ all this command is using winget or . . . you can check the source code!
 git clone https://github.com/RangS-1/Ferminal.git
 cd Ferminal
 ```
-3. python3 main.py
+3. python3 ferminal.py
