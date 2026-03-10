@@ -88,7 +88,8 @@ def app():
             u = os.system(f'type {command[2:]}')
             print(f"\n\ninside of {command[2:]}")
 
-        elif command == 'z': # i'm just trolling _:)
+        elif command == 'z': # i'm just trolling _:), at least you can rest for 30 seconds :v
+            print("You need to rest for 30 seconds :v\n")
             t.sleep(30)
 
         elif command[:2] == 'p ':
@@ -116,6 +117,21 @@ def app():
                 os.system("winget install --id ApacheFriends.Xampp.8.2")
             else:
                 print("Read Documentation!")
+
+        # GIT
+        elif command[:3] == "gic":
+            git_clone = os.system(f'git clone {command[3:]}')
+            print("Yhou have cloned the repository!")
+        elif command[:3] == "gip":
+            git_pull = os.system(f'git pull {command[3:]}')
+            print("You have pulled the repository!")
+        elif command[:3] == "gpu":
+            git_push = os.system(f'git push {command[6:]}')
+            print("You have pushed the repository!")
+        elif command[:3] == "gim":
+            git_commit = os.system(f'git commit -m "{command[6:]}"')
+            print("You have commited the repository!")
+        
         else:
             os.system(command)
             print("Done using CMD _:)\n")
