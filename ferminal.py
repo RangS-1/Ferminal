@@ -142,8 +142,8 @@ def app():
         elif command[:3] == "gip":
             git_pull = os.system(f'git pull {command[3:]}')
             print("You have pulled the repository!")
-        elif command[:3] == "gips":
-            git_push = os.system(f'git push {command[6:]}')
+        elif command[:3] == "gih":
+            git_push = os.system(f'git push {command[3:]}')
             print("You have pushed the repository!")
         elif command[:3] == "gim":
             git_commit = os.system(f'git commit -m "{command[6:]}"')
