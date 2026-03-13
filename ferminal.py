@@ -35,7 +35,7 @@ def app():
             print("""| Commands     | Description                                                            | Command Prompt|
 |--------------|------------------------------------------------------------------------|---------------|
 |      h       | show this help menu                                                    | nothing :V    |
-|      p       | clear the screen                                                       | cls           |
+|      b       | clear the screen                                                       | cls           |
 |      l       | show directory                                                         | dir           |
 |      w       | show working directory or where you are                                | chdir         |
 |      e       | echo (You know what i mean -_-)                                        | echo          |
@@ -118,23 +118,43 @@ def app():
                 os.system("winget install PostgreSQL.PostgreSQL -e")
             elif command[2:] == 'xampp':
                 os.system("winget install --id ApacheFriends.Xampp.8.2")
+            elif command[2:] == 'laravel':
+                os.system("laravel new")
             else:
                 print("Read Documentation!")
 
         # GIT
+        elif command[:3] == "gia":
+            git_add = os.system(f'git add {command[4:]}')
+            print("You have added the file to the staging area!")
+        elif command[:3] == "gis":
+            git_stat = os.system(f'git status "{command[6:]}"')
+            print("That's the Git Status!")
         elif command[:3] == "gic":
             git_clone = os.system(f'git clone {command[3:]}')
-            print("Yhou have cloned the repository!")
+            print("You have cloned the repository!")
+        elif command[:3] == "gin":
+            git_init = os.system('git init')
+            print("You have initialized the repository!")
+        elif command[:3] == "gib":
+            git_branch = os.system(f'git branch {command[3:]}')
+            print("You have created the branch!")
         elif command[:3] == "gip":
             git_pull = os.system(f'git pull {command[3:]}')
             print("You have pulled the repository!")
-        elif command[:3] == "gpu":
+        elif command[:3] == "gips":
             git_push = os.system(f'git push {command[6:]}')
             print("You have pushed the repository!")
         elif command[:3] == "gim":
             git_commit = os.system(f'git commit -m "{command[6:]}"')
             print("You have commited the repository!")
-        
+        elif command[:3] == 'gil':
+            log = os.system("git log")
+        elif command[:3] == 'gif':
+            git_fetch = os.system(f'git fetch {command[6:]}')
+            print("You have fetched the repository!")
+        elif command[:3] == 'gir':
+            git_remote = os.system(f'git remote {command[6:]}')
         else:
             os.system(command)
             print("Done using CMD _:)\n")
