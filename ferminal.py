@@ -146,7 +146,7 @@ def app():
             git_push = os.system(f'git push {command[3:]}')
             print("You have pushed the repository!")
         elif command[:3] == "gim":
-            git_commit = os.system(f'git commit -m "{command[6:]}"')
+            git_commit = os.system(f'git commit -m "{command[3:]}"')
             print("You have commited the repository!")
         elif command[:3] == 'gil':
             log = os.system("git log")
