@@ -155,6 +155,14 @@ def app():
             print("You have fetched the repository!")
         elif command[:3] == 'gir':
             git_remote = os.system(f'git remote {command[6:]}')
+        elif command[:3] == 'gie':
+            git_merge = os.system(f'git merge {command[3:]}')
+        elif command[:3] == 'gik':
+            git_checkout = os.system(f'git checkout {command[6:]}')
+            print("You have checked out the branch!")
+        elif command[:3] == 'gig':
+            git_tag = os.system(f'git tag {command[3:]}')
+            print("You have created the tag!")
         else:
             os.system(command)
             print("Done using CMD _:)\n")
