@@ -40,3 +40,35 @@ footer {
     background-color: #020617;
     text-align: center;
 }
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: rgba(30, 20, 60, 0.92); /* ungu gelap semi-transparan */
+    backdrop-filter: blur(8px);
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 2rem 1rem;
+    box-shadow: -6px 0 25px rgba(0,0,0,0.35);
+    z-index: 100;
+}
+.sidebar button {
+    width: 100%;
+    padding: 14px 24px;
+    margin: 6px 0;
+    background: transparent;
+    border: none;
+    color: #e0d4ff;
+    text-align: left;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateX(6px);
+}
