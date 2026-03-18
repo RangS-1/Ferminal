@@ -4,6 +4,19 @@ body{
     padding: 0;
     background-color: #0B0F19;
 }
+a{
+    background-color: red;
+    width: 100%;
+    padding: 14px 24px;
+    background: transparent;
+    border: none;
+    color: #94A3B8;
+    text-align: left;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 nav a{
     color: #E2E8F0;
     text-decoration: none;
@@ -44,10 +57,11 @@ footer {
 .sidebar {
     width: 260px;
     height: 100vh;
-    background: rgba(30, 20, 60, 0.92); /* ungu gelap semi-transparan */
+    background: #020617; /* ungu gelap semi-transparan */
     backdrop-filter: blur(8px);
     color: white;
     position: fixed;
+    text-align: center;
     right: 0;
     top: 0;
     padding: 2rem 1rem;
@@ -55,12 +69,12 @@ footer {
     z-index: 100;
 }
 .sidebar button {
+    background-color: red;
     width: 100%;
     padding: 14px 24px;
-    margin: 6px 0;
     background: transparent;
     border: none;
-    color: #e0d4ff;
+    color: #94A3B8;
     text-align: left;
     font-size: 1.05rem;
     cursor: pointer;
@@ -69,6 +83,59 @@ footer {
 }
 
 .sidebar button:hover {
-    background: rgba(255,255,255,0.12);
-    transform: translateX(6px);
+    background: #0F172A;
+    transform: translateX(10px);
+}
+.doc-card {
+    width: 99%;
+    background: #0F172A; /* konsisten dengan navbar */
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    color: #E2E8F0;
+}
+.doc-card img {
+    width: 10%;
+    text-align: center;
+}
+.doc-card .card-body {
+    padding: 10px;
+}
+
+.doc-card h3 {
+    margin-bottom: 8px;
+    color: #82C4FF;
+}
+
+.doc-card p {
+    color: #94A3B8;
+}
+.doc-card button {
+    background: #1E293B;
+    border: 1px solid #334155;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.doc-card button a {
+    color: #E2E8F0;
+    text-decoration: none;
+}
+
+.doc-card button:hover {
+    background: #334155;
+}
+.content {
+    margin-right: 280px; /* lebih besar dari sidebar (260px) */
+    padding: 10px;
+}
+table{
+    width: 100%;
+    border: solid;
+}
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
 }
