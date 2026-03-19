@@ -17,79 +17,84 @@
     <div class="sidebar">
         <img src="../icon.ico" width="100px" height="100px">
         <h3>Ferminal Docs v1.0</h3>
-        <button><a href="documentation.html">Basic Commands</a></button>
+        <button><a href="commands.html">Basic Commands</a></button>
         <button><a href="installer.html">Installer</a></button>
         <button><a href="git.html">Git</a></button>
         <button><a href="logout.html">Logout</a></button>
     </div>
     <div class="content">
     <div class="doc-card">
-        <img src="img/download.png" alt="Basic Commands photos">
-        <div class="card-body">
-            <h3>Installer</h3>
-            <p>What is Installer in Ferminal? well, Installer is a tool that simplifies the process of installing and setting up Ferminal on your system. With it, you can easily install programming language, dependencies and other tools on your computer with just a few clicks.
-                You just need to type the installation command in the Ferminal. But remember that all of this command is using winget package manager, so you need to have winget installed on your system to use this feature. With the installer, you can quickly set up your development environment and get started with your projects in no time.
-            </p>
-            
-                <table>
-                    <tr>
-                        <th>Apps/Dependencies</th>
-                        <th>Description</th>
-                        <th>Installation</th>
-                    </tr>
-                    <tr>
-                        <td>Git</td>
-                        <td>Version control system</td>
-                        <td>i git</td>
-                    </tr>
-                    <tr>
-                        <td>Python 3</td>
-                        <td>New version of Python</td>
-                        <td>i py</td>
-                    </tr>
-                    <tr>
-                        <td>PHP</td>
-                        <td>Server-side scripting language</td>
-                        <td>i php</td>
-                    </tr>
-                    <tr>
-                        <td>Composer</td>
-                        <td>Dependency Manager for PHP</td>
-                        <td>i composer</td>
-                    </tr>
-                    <tr>
-                        <td>Oracle JDK</td>
-                        <td>Java Development Kit</td>
-                        <td>i jdk</td>
-                    </tr>
-                    <tr>
-                        <td>Open JDK</td>
-                        <td>Java Development Kit</td>
-                        <td>i ojdk</td>
-                    </tr>
-                    <tr>
-                        <td>MySQL</td>
-                        <td>Database Management System</td>
-                        <td>i msql</td>
-                    </tr>
-                    <tr>
-                        <td>PostgreSQL</td>
-                        <td>Database Management System</td>
-                        <td>i psql</td>
-                    </tr>
-                    <tr>
-                        <td>XAMPP</td>
-                        <td>Web Development Environment</td>
-                        <td>i xampp</td>
-                    </tr>
-                    <tr>
-                        <td>Laravel</td>
-                        <td>PHP Framework</td>
-                        <td>i laravel</td>
-                    </tr>
-                </table>
-            
+        <div class="img-logo">
+        <img src="img/news.png" alt="Latest News photos">
         </div>
+        <div class="card-body">
+            <h3>Latest News</h3>
+            <p>Ferminal now updated to version 1.3. With the update
+                to version 1.3, Ferminal has added a new feature that simplifies the Git Command with aliases.
+                I'm also fix the change directory error that occurs when you use the "d" command,
+                and the "h" command got fixed to the latest documentation.
+            </p>
+            <h3>Module/Library</h3>
+            <p>Ferminal 1.3 needed some module/library to run, such as:
+                <ul>
+                    <li>OS module</li>
+                    <li>shlex module</li>
+                    <li>sys module</li>
+                    <li>time module</li>
+                    <li>colorama</li>
+                </ul>
+            </p>
+            <h3>Installation</h3>
+            <p>There's 2 options to install Ferminal, you can either download the executable file or run the python script. If you want to run the python script, you need to have Python 3 installed on your system and also install the dependencies using pip.</p>
+            </p>
+            <h4>Ferminal Executable</h4>
+            <ul>
+                    <li>Install the executable file from the official <a href="https://github.com/ferminal/ferminal/releases">github release</a></li>
+                    <li>Double click the executable file to run it</li>
+                    <li>Then you can start using Ferminal!</li>
+                </ul>
+            <h4>Ferminal Python Script</h4>
+            <div class="install">
+                <ul>
+                    <li>Install Python 3 from the official <a href="https://www.python.org/downloads/">python website</a></li>
+                    <li>Open the command prompt and navigate to the directory where you downloaded the Ferminal python script</li>
+                    <li>Install the dependencies using pip by running the command: pip install -r requirements.txt</li>
+                    <li>Run the python script using the command: python ferminal.py</li>
+                    <li>Then you can start using Ferminal!</li>
+                </ul>
+            </div>
+            <h3>Post Installation (Recommended)</h3>
+            <p>After installing Ferminal (Executable), it's recommended to add it to your system's PATH environment variable. This will allow you to run Ferminal from any location in the command prompt.</p>
+            <p>To add Ferminal to your PATH, follow these steps:</p>
+            <ul>
+                <li>Open the Start menu and search for "Environment Variables"</li>
+                <li>Click on "Edit the system environment variables"</li>
+                <li>In the System Properties window, click on the "Environment Variables" button</li>
+                <li>In the Environment Variables window, under "System variables", scroll down and find the "Path" variable, then click on "Edit"</li>
+                <li>In the Edit Environment Variable window, click on "New" and add the path to the directory where you installed Ferminal (e.g., C:\Ferminal)</li>
+                <li>Click "OK" to close all windows</li>
+            </p>
+        </div>
+        <div class="image-center">
+            <img src="img/post-installation1.png" alt="Post-Installation Image">
+            <p>Post-Installation Image 1</p>
+            <img src="img/post-installation2.png" alt="Post-Installation Image">
+            <p>Post-Installation Image 2</p>
+            <img src="img/post-installation3.png" alt="Post-Installation Image">
+            <p>Post-Installation Image 3</p>
+            <img src="img/post-installation4.png" alt="Post-Installation Image">
+            <p>Post-Installation Image 4</p>
+            <img src="img/post-installation5.png" alt="Post-Installation Image">
+            <p>Post-Installation Image 5</p>
+        </div>
+        <p>
+            Advantages after doing this post-installation step:
+            <ul>
+                <li>You can run Ferminal from any location in the command prompt</li>
+                <li>It's more convenient to use Ferminal without having to navigate to its installation directory</li>
+                <li>You can also run Ferminal from the Run dialog (Win + R) by typing "fm" and pressing Enter.</li>
+            </ul>
+        </p>
     </div>
 </div>
 </body>

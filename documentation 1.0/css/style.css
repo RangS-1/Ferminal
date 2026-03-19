@@ -40,3 +40,56 @@ footer {
     background-color: #020617;
     text-align: center;
 }
+
+.skill-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; 
+}
+
+.skill-section h2 {
+    font-size: 3em; 
+    margin-bottom: 50px; 
+}
+
+.skill-content {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    max-width: 2000px; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+}
+
+.skill-description {
+    max-width: 600px; 
+    margin-right: 50px; 
+    text-align: left;
+    font-size: 1.2em; 
+    line-height: 1.5; 
+}
+
+.skill-table {
+    width: 400px; 
+    text-align: left; 
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between; 
+    margin: 15px 0; 
+    font-size: 1.2em; 
+}
+
+.progress {
+    height: 20px;
+    background-color: #ddd; 
+    border-radius: 5px; 
+    margin: 10px 0; 
+}
+
+.progress-fill {
+    height: 100%; 
+    background-color: white; 
+    border-radius: 5px; 
+}
