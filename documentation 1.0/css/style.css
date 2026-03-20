@@ -30,7 +30,7 @@ main {
 }
 .jumbotron {
   font-size: 20px;
-  padding: 60px;
+  padding: 100px;
   background-color: #00c8eb;
   text-align: center;
   color: white;
@@ -61,25 +61,25 @@ footer {
     flex-wrap: wrap; 
 }
 
-.skill-description {
+.author {
     max-width: 600px; 
     margin-right: 50px; 
     text-align: left;
     font-size: 1.2em; 
     line-height: 1.5; 
 }
-
-.skill-table {
-    width: 400px; 
-    text-align: left; 
+.author h1{
+    color: white;
+}
+.author p{
+    color: white;
+}
+.author a{
+    color: #00c8eb;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.skill-label {
-    display: flex;
-    justify-content: space-between; 
-    margin: 15px 0; 
-    font-size: 1.2em; 
-}
 
 .progress {
     height: 20px;
@@ -92,4 +92,51 @@ footer {
     height: 100%; 
     background-color: white; 
     border-radius: 5px; 
+}
+.title h1{
+    text-align: center;
+    color: #f9f9f9; 
+}
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #0F172A;
+}
+
+.card {
+    background-color: #383a31;
+    border-radius: 10px;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 15px;
 }

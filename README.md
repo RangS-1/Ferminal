@@ -1,6 +1,6 @@
 <div align="center">
 <a href="github.com/RangS-1/Ferminal">
-<img src="icon.ico" alt="Ferminal Icon" width="312" height="272"/>
+<img src="icon.png" alt="Ferminal Icon" width="312" height="272"/>
 </a>
 
 # Ferminal
