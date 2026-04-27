@@ -9,7 +9,7 @@ def app():
     print("(c) RangS. All rights reserved\n")
     while True:
                 
-        sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>! " + Fore.WHITE)
+        sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>!\n " + Fore.WHITE)
         command = input()
 
         try:
@@ -139,6 +139,9 @@ def app():
         elif command[:3] == "gib":
             git_branch = os.system(f'git branch {command[3:]}')
             print("You have created the branch!")
+        elif command[:3] == "gibd":
+            git_branch = os.system(f'git branch -d {command[3:]}')
+            print("You have deleted the branch!")
         elif command[:3] == "gip":
             git_pull = os.system(f'git pull {command[3:]}')
             print("You have pulled the repository!")
@@ -147,7 +150,7 @@ def app():
             print("You have pushed the repository!")
         elif command[:3] == "gim":
             git_commit = os.system(f'git commit -m "{command[3:]}"')
-            print("You have commited the repository!")
+            print("You have committed the repository!")
         elif command[:3] == 'gil':
             log = os.system("git log")
         elif command[:3] == 'gif':
@@ -157,9 +160,12 @@ def app():
             git_remote = os.system(f'git remote {command[6:]}')
         elif command[:3] == 'gie':
             git_merge = os.system(f'git merge {command[3:]}')
-        elif command[:3] == 'gik':
+        elif command[:3] == 'gio':
             git_checkout = os.system(f'git checkout {command[6:]}')
             print("You have checked out the branch!")
+        elif command[:3] == 'giob':
+            git_checkout = os.system(f'git checkout -b {command[6:]}')
+            print("You have created and checked out the branch!")
         elif command[:3] == 'gig':
             git_tag = os.system(f'git tag {command[3:]}')
             print("You have created the tag!")
