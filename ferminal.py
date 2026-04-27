@@ -5,7 +5,7 @@ import time as t
 from colorama import Fore
 
 def app():
-    print("Ferminal v.1.0")
+    print("Ferminal v1.3.2")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
