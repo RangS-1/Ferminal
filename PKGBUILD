@@ -16,6 +16,7 @@ makedepends=(
     'python-build'
     'python-installer'
     'python-wheel'
+    'python-setuptools'
 )
 
 source=("$pkgname-$pkgver.tar.gz::https://github.com/RangS-1/Ferminal/archive/refs/tags/v$pkgver.tar.gz")
