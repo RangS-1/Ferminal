@@ -4,20 +4,13 @@ body{
     padding: 0;
     background-color: #0B0F19;
 }
-a{
-    background-color: red;
-    width: 100%;
-    padding: 14px 24px;
+a {
+    color: #82C4FF;
     text-decoration: none;
-    background: transparent;
-    border: none;
-    color: #94A3B8;
-    text-align: left;
-    font-size: 1.05rem;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    left: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 nav a{
     color: #E2E8F0;
@@ -59,7 +52,7 @@ footer {
 .sidebar {
     width: 260px;
     height: 100vh;
-    background: #020617; /* ungu gelap semi-transparan */
+    background: #020617;
     backdrop-filter: blur(8px);
     color: white;
     position: fixed;
@@ -69,14 +62,35 @@ footer {
     padding: 2rem 1rem;
     box-shadow: -6px 0 25px rgba(0,0,0,0.35);
     z-index: 100;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
+
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #0B0F19;
+    border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
 .sidebar button {
     background-color: red;
     width: 100%;
     padding: 14px 24px;
     background: transparent;
     border: none;
-    color: #94A3B8;
+    color: #FFFFFF;
     text-align: left;
     font-size: 1.05rem;
     cursor: pointer;
@@ -88,6 +102,18 @@ footer {
     background: #0F172A;
     transform: translateX(10px);
 }
+
+.sidebar button.active {
+    background: #1E293B;
+    color: #82C4FF;
+    border-left: 3px solid #82C4FF;
+}
+
+.sidebar button.active a {
+    color: #82C4FF;
+    font-weight: bold;
+}
+
 .doc-card {
     width: 99%;
     background: #0F172A; /* konsisten dengan navbar */
@@ -117,8 +143,13 @@ footer {
 }
 
 .doc-card p {
-    color: #94A3B8;
+    color: #CBD5E1;
 }
+
+.doc-card li {
+    color: #CBD5E1;
+}
+
 .doc-card button {
     background: #1E293B;
     border: 1px solid #334155;
@@ -141,11 +172,19 @@ footer {
 table{
     width: 100%;
     border: solid;
+    border-color: #334155;
 }
-table th, table td {
+table th {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #334155;
+    color: #82C4FF;
+}
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    color: #E2E8F0;
 }
 .install a{
     background-color: red;
@@ -169,4 +208,20 @@ table th, table td {
     height: auto;
     border-radius: 8px;     /* optional: biar lebih bagus */
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);  /* optional */
+}
+
+.image-center p {
+    color: #CBD5E1;
+}
+
+.doc-card h4 {
+    color: #E2E8F0;
+}
+
+.doc-card ul li {
+    color: #CBD5E1;
+}
+
+.doc-card a {
+    color: #82C4FF;
 }

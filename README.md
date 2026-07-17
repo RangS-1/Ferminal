@@ -18,4 +18,4 @@ and yeah, i made this terminal for more efficient time, but only on windows, sor
 Instead of writing long commands repeatedly, just use short **custom aliases** that you define yourself.
 
 ## Ferminal Documentation
-You can see the documentation <a href="https://rangs-1.github.io/Ferminal/documentation 1.0">here</a>
+You can see the documentation <a href="https://rangs-1.github.io/Ferminal/documentation%201.0/">here</a>
