@@ -1,19 +1,22 @@
 [project]
 name = "ferminal"
-version = "1.3.2"
+version = "1.3.3"
 description = "Custom Wrapper CLI to make your work faster"
 authors = [
     {name="RangS"}
 ]
 
 dependencies = [
-    "requests"
-    "colorama"
+    "requests",
+    "colorama",
 ]
 
 [project.scripts]
 ferminal = "ferminal.main:main"
 
 [build-system]
-requires = ["setuptools"]
+requires = [
+    "setuptools>=61",
+    "wheel"
+]
 build-backend = "setuptools.build_meta"

@@ -4,8 +4,8 @@ import os
 import time as t
 from colorama import Fore
 
-def app():
-    print("Ferminal v1.3.2")
+def main():
+    print("Ferminal v1.3.3")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
