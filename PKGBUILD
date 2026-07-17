@@ -1,9 +1,9 @@
-pkgname=Ferminal
+pkgname=ferminal
 pkgver=1.3.3
 pkgrel=1
 pkgdesc="Custom Wrapper CLI to make your work faster"
 arch=('any')
-url="https://github.com/RangS-1/Ferminal"
+url="https://github.com/RangS-1/ferminal"
 license=('MIT')
 
 depends=(
@@ -19,7 +19,7 @@ makedepends=(
     'python-setuptools'
 )
 
-source=("$pkgname-$pkgver.tar.gz::https://github.com/RangS-1/Ferminal/archive/refs/tags/v$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/RangS-1/ferminal/archive/refs/tags/v$pkgver.tar.gz")
 
 sha256sums=('14a0a1315ff969871d0cd47be5bdcd779a52427ad33ab2e9fbbee408132784ba')
 
