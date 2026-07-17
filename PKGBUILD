@@ -20,7 +20,7 @@ makedepends=(
 
 source=("$pkgname-$pkgver.tar.gz::https://github.com/RangS-1/Ferminal/archive/refs/tags/v$pkgver.tar.gz")
 
-sha256sums=('aa568bd073bad87dae20a007e9a58878dbea5ce42c85181bae639d60d856429b')
+sha256sums=('14a0a1315ff969871d0cd47be5bdcd779a52427ad33ab2e9fbbee408132784ba')
 
 build() {
     cd "$pkgname-$pkgver"
