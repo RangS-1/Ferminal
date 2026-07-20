@@ -9,8 +9,8 @@ def main():
     print("(c) RangS. All rights reserved\n")
     while True:
                 
-        sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>!\n " + Fore.WHITE)
-        command = input()
+        sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>!\n" + Fore.WHITE)
+        command = input(">>!")
 
         try:
             insert = shlex.split(command)
@@ -153,6 +153,22 @@ def main():
             git_checkout = os.system(f'git checkout -b {command[6:]}')
         elif command[:3] == 'gig':
             git_tag = os.system(f'git tag {command[3:]}')
+        elif command[:3] == 'gid':
+            git_tag = os.system(f'git diff {command[3:]}')
+        elif command == 'girh':
+            git_tag = os.system(f'git reset HEAD')
+        elif command[:4] == 'girs':
+            git_tag = os.system(f'git restore {command[5:]}')
+        elif command[:4] == 'gist':
+            git_tag = os.system(f'git stash')
+        elif command[:5] == 'gista':
+            git_tag = os.system(f'git stash apply')
+        elif command[:4] == 'gifd':
+            git_tag = os.system(f'git clean -fd')
+        elif command[:4] == 'gish':
+            git_tag = os.system(f'git show {command[5:]}')
+        elif command[:4] == 'gibl':
+            git_tag = os.system(f'git blame {command[5:]}')
         else:
             os.system(command)
 
