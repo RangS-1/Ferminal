@@ -1,6 +1,6 @@
 pkgname=ferminal
 _repo=Ferminal
-pkgver=1.3.3
+pkgver=1.3.4
 pkgrel=1
 pkgdesc="Custom Wrapper CLI to make your work faster"
 arch=('any')
