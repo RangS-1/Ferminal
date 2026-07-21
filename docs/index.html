@@ -1,50 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferminal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueDoc | Beautiful Documentation Website Template</title>
+  <meta name="description" content="A premium, light-blue themed documentation template with responsive layout, light/dark mode toggle, and rich features. Built using HTML, CSS, and JS.">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="documentation/">Documentation</a></li>
-            <li><a href="author/">Author</a></li>
-        </ul>
-    </nav>
-    <div class="jumbotron">
-    <h1>Ferminal</h1>
-    
-    <p>
-      Lightweight custom terminal for windows 10+
-    </p>
-  </div>
-  <div class="portfolio-container">
-    <div class="card">
-                    <img src="assets/img/question.png" alt="What?">
-                    <div class="card-body">
-                        <h3>What's Ferminal?</h3>
-                        <p>Ferminal is a terminal emulator for Windows that simplifies command-line operations with aliases!</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <img src="assets/img/question.png" alt="What?">
-                    <div class="card-body">
-                        <h3>Why Ferminal?</h3>
-                        <p>Because it makes working with the command line more efficient and user-friendly! I guess?</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <img src="assets/img/question.png" alt="What?">
-                    <div class="card-body">
-                        <h3>When Ferminal?</h3>
-                        <p>You can use it when you are working with the command line!</p>
-                    </div>
-                </div>
-                </div>
+
+  <!-- ==========================================
+       HEADER / NAVBAR
+       ========================================== -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="Ferminal/" class="logo-link">
+          <img src="assets/img/icon.png" width="50px" height="50px">
+          <span>Ferminal</span>
+        </a>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="Ferminal/docs/installation/" class="nav-link">Docs</a></li>
+            <li><a href="Ferminal/about/" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="nav-right">
+        <button class="version-badge">
+          <span>v1.3.4</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <a href="https://github.com/RangS-1/Ferminal" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Repository">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+
+        <button id="theme-toggle" class="icon-btn" title="Toggle color mode">
+          <!-- Sun Icon (displayed in dark mode) -->
+          <svg id="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (displayed in light mode) -->
+          <svg id="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Ferminal</h1>
+      <p class="hero-desc">⚡ Custom Wrapper CLI, blazingly fast made with python</p>
+      <a href="Ferminal/docs/installation/" class="btn-primary">
+        <span>Get Started</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURES SECTION
+       ========================================== -->
+  <main class="features-section">
+    <center>
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-ill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <h3>Lightweight</h3>
+        <p>A Lightweight Custom Wrapper CLI with minimum CPU usage.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-ill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <polyline points="8 14 10 16 16 11"></polyline>
+          </svg>
+        </div>
+        <h3>Efficient</h3>
+        <p>Very efficient and to the point.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-ill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+          </svg>
+        </div>
+        <h3>Multifunction</h3>
+        <p>Can be used with any kind of shell.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-ill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+        </div>
+        <h3>Easy</h3>
+        <p>Easy to use like opening image.</p>
+      </div>
+      </center>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Ferminal</h3>
+          <p> Simple Custom Wrapper CLI for, blazingly fast made with python</p>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="Ferminal/docs/installation/">Docs</a></li>
+            <li><a href="Ferminal/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Community</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/RangS-1/Ferminal" target="_blank" rel="noopener noreferrer">Github ↗</a></li>
+            <li><a href="https://aur.archlinux.org/packages/ferminal" target="_blank" rel="noopener noreferrer">AUR ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <center>
+          <p>Copyright &copy; 2026 Ferminal.</p>
+        </center>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript Link -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

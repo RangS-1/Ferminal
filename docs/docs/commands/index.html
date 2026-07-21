@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commands | Ferminal Docs</title>
+  <meta name="description" content="Command reference for Ferminal, including basic shell commands and command categories.">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVBAR
+       ========================================== -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../" class="logo-link">
+          <img src="../../assets/img/icon.png" width="50px" height="50px">
+          <span>Ferminal</span>
+        </a>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="Ferminal/docs/installation/" class="nav-link active">Docs</a></li>
+            <li><a href="../../about/" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="nav-right">
+        
+      
+        <button class="version-badge">
+          <span>v1.3.4</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        
+        <a href="https://github.com/RangS-1/Ferminal" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Repository">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+
+        <button id="theme-toggle" class="icon-btn" title="Toggle color mode">
+          <!-- Sun Icon -->
+          <svg id="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN LAYOUT CONTAINER
+       ========================================== -->
+  <div class="docs-container">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <ul class="sidebar-nav">
+        <li>
+          <a href="../installation/" class="sidebar-item-link">Installation</a>
+        </li>
+        <li>
+          <a href="../commands/" class="sidebar-item-link active">Commands</a>
+        </li>
+        <li>
+          <a href="../git/" class="sidebar-item-link">Git</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MIDDLE CONTENT -->
+    <main class="docs-content">
+      <div class="breadcrumbs">
+        <a href="../../">Home</a>
+        <span class="breadcrumbs-sep">/</span>
+        <span>Docs</span>
+        <span class="breadcrumbs-sep">/</span>
+        <span>Commands</span>
+      </div>
+
+      <div class="docs-title-wrapper">
+        <h1 class="docs-title">Commands</h1>
+        <span class="docs-version-tag">v1.3.4</span>
+      </div>
+
+      <div class="docs-body">
+        <p>Below is the full command reference available in Ferminal, grouped by category for easier reading.</p>
+
+        <section>
+          <h2 id="prerequisites">Prerequisites</h2>
+          <p>No special setup is required beyond running Ferminal from a terminal. Just enter the commands below as written.</p>
+        </section>
+
+        <section>
+          <h1 id="basic-commands">Commands</h1>
+          <p>Here are the commands supported by Ferminal, grouped by purpose:</p> 
+          <h3 id="filesystem">File & Directory</h3>
+          <pre><code>d &lt;path&gt;                  # change directory
+l                        # list directory contents
+la                       # list directory contents including hidden files
+k &lt;folder&gt;                # create a folder
+m &lt;folder&gt;                # remove a folder
+f &lt;file&gt;                  # create a file
+r &lt;file&gt;                  # delete a file
+v &lt;path&gt;                  # move a file or folder
+c &lt;file&gt;                  # copy a file
+cr &lt;folder&gt;               # copy a folder recursively
+u &lt;file&gt;                  # show file contents</code></pre>
+
+          <h3 id="system">System & Utility</h3>
+          <pre><code>x                        # exit the app
+b                        # clear the screen
+e &lt;text&gt;                  # echo text
+h                        # show help menu
+w                        # show current working directory
+z                        # pause for 30 seconds
+p &lt;host&gt;                  # ping a host</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <!-- RIGHT TABLE OF CONTENTS -->
+    <aside class="toc-sidebar">
+      <h3 class="toc-title">On This Page</h3>
+      <nav>
+        <ul class="toc-nav">
+          <li><a href="#prerequisites" class="toc-link">Prerequisites</a></li>
+          <li><a href="#basic-commands" class="toc-link">Commands</a></li>
+          <li><a href="#filesystem" class="toc-link">File & Directory</a></li>
+          <li><a href="#system" class="toc-link">System & Utility</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Ferminal</h3>
+          <p>Custom Wrapper CLI.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Docs</a></li>
+            <li><a href="../../">Features</a></li>
+            <li><a href="../../about/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Community</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>More</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 Ferminal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript Link -->
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
