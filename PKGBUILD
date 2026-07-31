@@ -9,7 +9,6 @@ license=('MIT')
 
 depends=(
     'python'
-    'python-requests'
     'python-colorama'
 )
 
@@ -40,4 +39,9 @@ package() {
 
     install -Dm644 LICENSE \
     "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+    sudo install -Dm644 ferminal.1 \
+    /usr/share/man/man1/ferminal.1
+
+    sudo gzip /usr/share/man/man1/ferminal.1
 }
