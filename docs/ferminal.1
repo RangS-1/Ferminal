@@ -1,0 +1,224 @@
+.TH FERMINAL 1 "July 2026" "Ferminal 1.3.4" "User Commands"
+
+.SH NAME
+ferminal \- lightweight terminal wrapper
+
+.SH SYNOPSIS
+.B <ferminal-command> | <value>
+.RI 
+
+.SH DESCRIPTION
+Ferminal is a lightweight, Python-based interactive shell wrapper that provides short aliases for common filesystem, Git, and installation tasks.
+It is designed to reduce typing and improve workflow speed by using single-letter commands for frequently used operations.
+
+.PP
+Note: Ferminal behaves as an interactive shell. Run
+.B ferminal
+and then enter commands at the prompt.
+
+.SH OPTIONS
+.TP
+.B -h, --help
+Display usage information and exit.
+
+.SH COMMANDS
+The following commands are available inside the Ferminal shell.
+.TP
+.B h
+Show the built-in help menu.
+
+.TP
+.B x
+Exit the Ferminal shell.
+
+.TP
+.B b
+Clear the screen.
+
+.TP
+.B l
+List directory contents.
+
+.TP
+.B la
+List all files including hidden entries.
+
+.TP
+.B w
+Show the current working directory.
+
+.TP
+.B d <path>
+Change the current directory to <path>.
+
+.TP
+.B k <name>
+Create a new directory named <name>.
+
+.TP
+.B f <name>
+Create a new file named <name>.
+
+.TP
+.B m <name>
+Remove the directory named <name>.
+
+.TP
+.B n <name>
+Remove the file named <name>.
+
+.TP
+.B v <source> <destination>
+Move a file or directory.
+
+.TP
+.B c <source> <destination>
+Copy a file.
+
+.TP
+.B cr <source> <destination>
+Copy a directory recursively.
+
+.TP
+.B u <file>
+Show the contents of <file>.
+
+.TP
+.B e <text>
+Print <text> to the terminal.
+
+.TP
+.B z
+Pause for thirty seconds.
+
+.TP
+.B p <host>
+Run ping against <host>.
+
+.SH COMMANDS \( GIT\)
+The following Git aliases are available inside the Ferminal shell.
+.TP
+.B gia <path>
+Stage changes for <path>.
+
+.TP
+.B gis
+Show Git status.
+
+.TP
+.B gic <repository>
+Clone a Git repository.
+
+.TP
+.B gin
+Initialize a Git repository.
+
+.TP
+.B gib <branch>
+Create a new branch named <branch>.
+
+.TP
+.B gibd <branch>
+Delete the branch named <branch>.
+
+.TP
+.B gip
+Pull updates from a remote repository.
+
+.TP
+.B gih
+Push commits to a remote repository.
+
+.TP
+.B gim <message>
+Commit staged changes with message <message>.
+
+.TP
+.B gil
+Show the Git log.
+
+.TP
+.B gif <remote>
+Fetch updates from <remote>.
+
+.TP
+.B gir <args>
+Manage Git remotes.
+
+.TP
+.B gie <branch>
+Merge <branch> into the current branch.
+
+.TP
+.B gio <branch>
+Check out <branch>.
+
+.TP
+.B giob <branch>
+Create and switch to a new branch named <branch>.
+
+.TP
+.B gig <tag>
+Create a Git tag named <tag>.
+
+.TP
+.B gid <path>
+Show changes for <path>.
+
+.TP
+.B girh
+Reset the current index (HEAD).
+
+.TP
+.B girs <path>
+Restore <path> from the working tree.
+
+.TP
+.B gist
+Stash changes.
+
+.TP
+.B gista
+Apply the latest stash.
+
+.TP
+.B gifd
+Clean untracked files and directories.
+
+.TP
+.B gish <object>
+Show Git object details.
+
+.TP
+.B gibl <file>
+Show blame information for <file>.
+
+.SH EXAMPLES
+.TP
+.B ferminal
+Start the Ferminal interactive shell.
+
+.TP
+.B h
+Show the help menu inside Ferminal.
+
+.TP
+.B d C:\\Users\\Example
+Change to the specified directory.
+
+.TP
+.B k project
+Create a directory named project.
+
+.TP
+.B gim "Initial commit"
+Commit changes with a message.
+
+.SH AUTHOR
+RangS
+
+.SH BUGS
+Report bugs via the project repository issue tracker.
+
+.SH LICENSE
+MIT License
