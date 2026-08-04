@@ -3,6 +3,7 @@ import shlex
 import os
 import time as t
 from colorama import Fore
+from prompt_toolkit import prompt
 
 def main():
     print("Ferminal v1.3.4")
@@ -10,7 +11,7 @@ def main():
     while True:
                 
         sys.stdout.write(Fore.CYAN + f"F# {os.getcwd()}>!\n" + Fore.WHITE)
-        command = input(">>!")
+        command = prompt(">>!")
 
         try:
             insert = shlex.split(command)
