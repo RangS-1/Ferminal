@@ -146,4 +146,44 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
   }
+
+  // ==========================================
+  // DEMO VIDEO PLAYBACK
+  // ==========================================
+  const demoVideo = document.getElementById('demo-video');
+  const videoOverlay = document.getElementById('video-overlay');
+  const videoPlayBtn = document.getElementById('video-play-btn');
+
+  if (demoVideo && videoOverlay && videoPlayBtn) {
+    const togglePlayback = async () => {
+      try {
+        if (demoVideo.paused) {
+          await demoVideo.play();
+          videoOverlay.classList.add('is-playing');
+          videoPlayBtn.setAttribute('aria-label', 'Pause Demo Video');
+        } else {
+          demoVideo.pause();
+          videoOverlay.classList.remove('is-playing');
+          videoPlayBtn.setAttribute('aria-label', 'Play Demo Video');
+        }
+      } catch (error) {
+        console.error('Unable to play demo video:', error);
+      }
+    };
+
+    videoPlayBtn.addEventListener('click', togglePlayback);
+
+    demoVideo.addEventListener('play', () => {
+      videoOverlay.classList.add('is-playing');
+    });
+
+    demoVideo.addEventListener('pause', () => {
+      videoOverlay.classList.remove('is-playing');
+    });
+
+    demoVideo.addEventListener('ended', () => {
+      videoOverlay.classList.remove('is-playing');
+      videoPlayBtn.setAttribute('aria-label', 'Play Demo Video');
+    });
+  }
 });
