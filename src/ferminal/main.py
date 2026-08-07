@@ -4,6 +4,17 @@ import os
 import time as t
 from colorama import Fore
 from prompt_toolkit import prompt
+from pathlib import Path as pt
+
+def check_home_dir():
+    home_dir = pt.home() / ".rrc"
+    if home_dir.exists():
+        print(f".rrc directory on {home_dir} exists.")
+    else:
+        print(f".rrc directory on {home_dir} does not exist. Creating it now...")
+        home_dir.mkdir(parents=True, exist_ok=True)
+        print(f".rrc directory created at {home_dir}.")
+        os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
 
 def main():
     print("Ferminal v1.3.4")
@@ -170,6 +181,10 @@ def main():
             git_tag = os.system(f'git show {command[5:]}')
         elif command[:4] == 'gibl':
             git_tag = os.system(f'git blame {command[5:]}')
+
+        #-- Project Generator
+        elif command.startswith("nm"):
+            check_home_dir()
         else:
             os.system(command)
 
