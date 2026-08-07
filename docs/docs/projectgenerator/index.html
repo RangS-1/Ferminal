@@ -33,7 +33,7 @@
         
       
         <button class="version-badge">
-          <span>v1.3.4</span>
+          <span>v1.4.0</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
@@ -84,6 +84,9 @@
         <li>
           <a href="../git/" class="sidebar-item-link active">Git</a>
         </li>
+        <li>
+          <a href="../projectgenerator/" class="sidebar-item-link active">Project Generator</a>
+        </li>
       </ul>
     </aside>
 
@@ -94,16 +97,16 @@
         <span class="breadcrumbs-sep">/</span>
         <span>Docs</span>
         <span class="breadcrumbs-sep">/</span>
-        <span>Installation</span>
+        <span>Project Generator</span>
       </div>
 
       <div class="docs-title-wrapper">
-        <h1 class="docs-title">Git</h1>
-        <span class="docs-version-tag">v1.3.4</span>
+        <h1 class="docs-title">Project Generator</h1>
+        <span class="docs-version-tag">v1.4.0</span>
       </div>
 
       <div class="docs-body">
-        <p>Welcome to Git Section. In here, you will learn how to use Ferminal to be more efficient using Git.</p>
+        <p>Welcome to the Project Generator Section. In here, you will learn how to use Ferminal to create new projects quickly.</p>
 
         <section>
           <h2 id="prerequisites">Prerequisites</h2>
@@ -112,43 +115,14 @@
 
         <section>
           <h1 id="basic-commands">Commands</h1>
-          <p>Here are the Git commands supported by Ferminal, grouped by purpose:</p>
+          <p>Here are the Project Generator commands supported by Ferminal, grouped by purpose:</p>
 
-          <h3 id="setup">Setup & Repository</h3>
-          <pre><code>gic &lt;repository-url&gt;   # git clone
-gin                       # git init</code></pre>
+          <h3 id="update">Update</h3>
+          <pre><code>nm                      # Update available project templates</code></pre>
 
-          <h3 id="snapshot">Snapshot & Review</h3>
-          <pre><code>gia .                    # git add
-gis                      # git status
-gim &lt;commit-message&gt;      # git commit -m ""
-gil                      # git log
-gid &lt;file-or-branch&gt;      # git diff
-girh                     # git reset HEAD
-girs &lt;file&gt;               # git restore</code></pre>
+          <h3 id="generate">Generate Projects</h3>
+          <pre><code>nm py                   # Generate a new Python project (./basic_app)</code></pre>
 
-          <h3 id="branch">Branch & Merge</h3>
-          <pre><code>gib &lt;branch-name&gt;        # git branch
-gibd &lt;branch-name&gt;       # git branch -d
-gio &lt;branch-name&gt;        # git checkout
-giob &lt;branch-name&gt;       # git checkout -b
-gie &lt;branch-name&gt;        # git merge</code></pre>
-
-          <h3 id="remote">Remote & Sync</h3>
-          <pre><code>gip &lt;remote&gt;              # git pull
-gih &lt;remote&gt;              # git push
-gif &lt;remote&gt;              # git fetch
-gir &lt;command&gt;             # git remote</code></pre>
-
-          <h3 id="tag">Tag & History</h3>
-          <pre><code>gig &lt;tag-name&gt;            # git tag
-gish &lt;commit&gt;             # git show
-gibl &lt;file&gt;               # git blame</code></pre>
-
-          <h3 id="stash">Stash & Cleanup</h3>
-          <pre><code>gist                     # git stash
-gista                    # git stash apply
-gifd                     # git clean -fd</code></pre>
         </section>
       </div>
     </main>
@@ -160,12 +134,8 @@ gifd                     # git clean -fd</code></pre>
         <ul class="toc-nav">
           <li><a href="#prerequisites" class="toc-link">Prerequisites</a></li>
           <li><a href="#basic-commands" class="toc-link">Commands</a></li>
-          <li><a href="#setup" class="toc-link">Setup & Repository</a></li>
-          <li><a href="#snapshot" class="toc-link">Snapshot & Review</a></li>
-          <li><a href="#branch" class="toc-link">Branch & Merge</a></li>
-          <li><a href="#remote" class="toc-link">Remote & Sync</a></li>
-          <li><a href="#tag" class="toc-link">Tag & History</a></li>
-          <li><a href="#stash" class="toc-link">Stash & Cleanup</a></li>
+          <li><a href="#update" class="toc-link">Update</a></li>
+          <li><a href="#generate" class="toc-link">Generate Projects</a></li>
         </ul>
       </nav>
     </aside>
