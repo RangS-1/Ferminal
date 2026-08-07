@@ -6,15 +6,19 @@ from colorama import Fore
 from prompt_toolkit import prompt
 from pathlib import Path as pt
 
-def check_home_dir():
+def check_rrc_dir():
     home_dir = pt.home() / ".rrc"
     if home_dir.exists():
         print(f".rrc directory on {home_dir} exists.")
     else:
-        print(f".rrc directory on {home_dir} does not exist. Creating it now...")
-        home_dir.mkdir(parents=True, exist_ok=True)
-        print(f".rrc directory created at {home_dir}.")
-        os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
+        print(f".rrc directory on {home_dir} does not exist!")
+        update = input("Would you like to install it? (y/n): ")
+        if update.lower() == 'y':
+            home_dir.mkdir(parents=True, exist_ok=True)
+            print(f".rrc directory created at {home_dir}.")
+            os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
+        else:
+            print("Installation Skipped...")
 
 def main():
     print("Ferminal v1.3.4")
@@ -184,7 +188,18 @@ def main():
 
         #-- Project Generator
         elif command.startswith("nm"):
-            check_home_dir()
+            check_rrc_dir()
+
+            if command[3:] == 'py':
+                print("Copying Python Project Template...")
+                os.system("cp -r ~/.rrc/Python/Basic_App/ .")
+            else:
+                update = input("Would you like to update it? (y/n): ")
+                if update.lower() == 'y':
+                    os.system("rm -rf ~/.rrc && git clone https://github.com/RangS-1/rrc.git ~/.rrc")
+                    print(".rrc directory updated.")
+                else:
+                    print("Update Skipped...")
         else:
             os.system(command)
 
