@@ -21,7 +21,7 @@ def check_rrc_dir():
             print("Installation Skipped...")
 
 def main():
-    print("Ferminal v1.3.4")
+    print("Ferminal v1.4.0")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
