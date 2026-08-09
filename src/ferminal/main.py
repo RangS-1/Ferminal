@@ -9,19 +9,19 @@ from pathlib import Path as pt
 def check_rrc_dir():
     home_dir = pt.home() / ".rrc"
     if home_dir.exists():
-        print(f".rrc directory on {home_dir} exists.")
+        print(Fore.GREEN + f".rrc directory on {home_dir} exists.")
     else:
-        print(f".rrc directory on {home_dir} does not exist!")
+        print(Fore.RED + f".rrc directory on {home_dir} does not exist!")
         update = input("Would you like to install it? (y/n): ")
         if update.lower() == 'y':
             home_dir.mkdir(parents=True, exist_ok=True)
-            print(f".rrc directory created at {home_dir}.")
+            print(Fore.GREEN + f".rrc directory created at {home_dir}.")
             os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
         else:
-            print("Installation Skipped...")
+            print(Fore.RED + "Installation Skipped...")
 
 def main():
-    print("Ferminal v1.4.0")
+    print("Ferminal v1.4.1")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
@@ -191,15 +191,32 @@ def main():
             check_rrc_dir()
 
             if command[3:] == 'py':
-                print("Copying Python Project Template...")
+                print(Fore.CYAN + "Copying Python Project Template...")
                 os.system("cp -r ~/.rrc/Python/Basic_App/ .")
+                print(Fore.GREEN + "Python Project Template copied successfully.")
+            elif command[3:] == 'blog':
+                print(Fore.CYAN + "Copying Blog Project Template...")
+                os.system("cp -r ~/.rrc/Static/Blog/ .")
+                print(Fore.GREEN + "Blog Project Template copied successfully.")
+            elif command[3:] == 'doc':
+                print(Fore.CYAN + "Copying Documentation Project Template...")
+                os.system("cp -r ~/.rrc/Static/Documentation/ .")
+                print(Fore.GREEN + "Documentation Project Template copied successfully.")
+            elif command[3:] == 'love2d':
+                print(Fore.CYAN + "Copying Love2D Project Template...")
+                os.system("cp -r ~/.rrc/GameDev/LOVE2D/ .")
+                print(Fore.GREEN + "Love2D Project Template copied successfully.")
+            elif command[3:] == 'react':
+                print(Fore.CYAN + "Copying React Project Template...")
+                os.system("cp -r ~/.rrc/React/ .")
+                print(Fore.GREEN + "React Project Template copied successfully.")
             else:
                 update = input("Would you like to update it? (y/n): ")
                 if update.lower() == 'y':
                     os.system("rm -rf ~/.rrc && git clone https://github.com/RangS-1/rrc.git ~/.rrc")
-                    print(".rrc directory updated.")
+                    print(Fore.GREEN + ".rrc directory updated.")
                 else:
-                    print("Update Skipped...")
+                    print(Fore.RED + "Update Skipped...")
         else:
             os.system(command)
 
