@@ -9,16 +9,29 @@ from pathlib import Path as pt
 def check_rrc_dir():
     home_dir = pt.home() / ".rrc"
     if home_dir.exists():
-        print(Fore.GREEN + f".rrc directory on {home_dir} exists.")
+        success()
+        print(f".rrc directory on {home_dir} exists.")
     else:
-        print(Fore.RED + f".rrc directory on {home_dir} does not exist!")
+        check()
+        print(f".rrc directory on {home_dir} does not exist!")
+        check()
         update = input("Would you like to install it? (y/n): ")
         if update.lower() == 'y':
             home_dir.mkdir(parents=True, exist_ok=True)
-            print(Fore.GREEN + f".rrc directory created at {home_dir}.")
+            print(f".rrc directory created at {home_dir}.")
             os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
         else:
-            print(Fore.RED + "Installation Skipped...")
+            failed()
+            print("Installation Skipped...")
+
+def success():
+    print(Fore.GREEN + "[✓] " + Fore.WHITE, end="")
+
+def failed():
+    print(Fore.RED + "[X] " + Fore.WHITE, end="")
+
+def check():
+    print(Fore.YELLOW + "[!] " + Fore.WHITE, end="")
 
 def main():
     print("Ferminal v1.4.1")
@@ -80,6 +93,8 @@ def main():
         elif command[:2] == "m ":
             if not os.path.exists(command[2:]):
                 print("Directory not found!\n")
+            elif os.path.isdir(command[2:]) == False:
+                print("Not a Directory!\n")
             else:
                 os.rmdir(command[2:])
                 print(f"Folder called {command[2:]} has been deleted")
@@ -112,31 +127,6 @@ def main():
 
         elif command[:2] == 'p ':
             p = os.system(f'ping {command[2:]}')
-
-        #installler! you can add something, or maybe you're lazy
-        elif command.startswith("i "):
-            if command[2:] == 'git':
-                os.system("winget install --id Git.Git -e --source winget")
-            elif command[2:] == 'py':
-                os.system("winget install Python.Python.3 -e")
-            elif command[2:] == 'php':
-                os.system("winget install PHP.PHP -e")
-            elif command[2:] == 'composer':
-                os.system("winget install Composer.Composer -e")
-            elif command[2:] == 'jdk':
-                os.system("winget install Oracle.JDK.21 -e")
-            elif command[2:] == 'ojdk':
-                os.system("winget install EclipseAdoptium.Temurin.17.JDK -e")
-            elif command[2:] == 'msql':
-                os.system("winget install Oracle.MySQL -e")
-            elif command[2:] == 'psql':
-                os.system("winget install PostgreSQL.PostgreSQL -e")
-            elif command[2:] == 'xampp':
-                os.system("winget install --id ApacheFriends.Xampp.8.2")
-            elif command[2:] == 'laravel':
-                os.system("laravel new")
-            else:
-                print("Read Documentation!")
 
         #-- Git
         elif command[:3] == "gia":
@@ -193,32 +183,45 @@ def main():
             check_rrc_dir()
 
             if command[3:] == 'py':
-                print(Fore.CYAN + "Copying Python Project Template...")
+                check()
+                print("Copying Python Project Template...")
                 os.system("cp -r ~/.rrc/Python/Basic_App/ .")
-                print(Fore.GREEN + "Python Project Template copied successfully.")
+                success()
+                print("Python Project Template copied successfully.")
             elif command[3:] == 'blog':
-                print(Fore.CYAN + "Copying Blog Project Template...")
+                check()
+                print("Copying Blog Project Template...")
                 os.system("cp -r ~/.rrc/Static/Blog/ .")
-                print(Fore.GREEN + "Blog Project Template copied successfully.")
+                success()
+                print("Blog Project Template copied successfully.")
             elif command[3:] == 'doc':
-                print(Fore.CYAN + "Copying Documentation Project Template...")
+                check()
+                print("Copying Documentation Project Template...")
                 os.system("cp -r ~/.rrc/Static/Documentation/ .")
-                print(Fore.GREEN + "Documentation Project Template copied successfully.")
+                success()
+                print("Documentation Project Template copied successfully.")
             elif command[3:] == 'love2d':
-                print(Fore.CYAN + "Copying Love2D Project Template...")
+                check()
+                print("Copying Love2D Project Template...")
                 os.system("cp -r ~/.rrc/GameDev/LOVE2D/ .")
-                print(Fore.GREEN + "Love2D Project Template copied successfully.")
+                success()
+                print("Love2D Project Template copied successfully.")
             elif command[3:] == 'react':
-                print(Fore.CYAN + "Copying React Project Template...")
+                check()
+                print("Copying React Project Template...")
                 os.system("cp -r ~/.rrc/React/ .")
-                print(Fore.GREEN + "React Project Template copied successfully.")
+                success()
+                print("React Project Template copied successfully.")
             else:
+                check()
                 update = input("Would you like to update it? (y/n): ")
                 if update.lower() == 'y':
                     os.system("rm -rf ~/.rrc && git clone https://github.com/RangS-1/rrc.git ~/.rrc")
-                    print(Fore.GREEN + ".rrc directory updated.")
+                    success()
+                    print(".rrc directory updated.")
                 else:
-                    print(Fore.RED + "Update Skipped...")
+                    check()
+                    print("Update Skipped...")
         else:
             os.system(command)
 
