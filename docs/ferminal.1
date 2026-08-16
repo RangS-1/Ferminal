@@ -1,4 +1,4 @@
-.TH FERMINAL 1 "July 2026" "Ferminal 1.3.4" "User Commands"
+.TH FERMINAL 1 "July 2026" "Ferminal 1.4.2" "User Commands"
 
 .SH NAME
 ferminal \- lightweight terminal wrapper
@@ -94,6 +94,29 @@ Pause for thirty seconds.
 .TP
 .B p <host>
 Run ping against <host>.
+
+.SH COMMANDS \( Project Generator\)
+Check or update the project template repository, then generate a project from the selected template.
+Supported templates: py, blog, doc, love2d, react.
+.TP
+.B nm py
+Generate Python app.
+
+.TP
+.B nm blog
+Generate Blog template.
+
+.TP
+.B doc
+Generate Documentation template.
+
+.TP
+.B love2d
+Generate love2d template.
+
+.TP
+.B react
+Generate react template.
 
 .SH COMMANDS \( GIT\)
 The following Git aliases are available inside the Ferminal shell.

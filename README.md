@@ -8,7 +8,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.4.1-purple)](https://github.com/RangS-1/Ferminal/releases)
+[![Version](https://img.shields.io/badge/version-1.4.2-purple)](https://github.com/RangS-1/Ferminal/releases)
 
 **A lightweight custom terminal and CLI wrapper built with Python.**
 
@@ -164,6 +164,7 @@ Ferminal can generate projects from templates stored in the `rrc` repository.
 Available templates include:
 
 ```text
+nm                 # check or update the templates repo
 nm py
 nm blog
 nm doc
@@ -171,7 +172,7 @@ nm love2d
 nm react
 ```
 
-The project generator uses the `~/.rrc` directory. If the directory does not exist, Ferminal can clone the template repository automatically. The template repository is on:
+The project generator uses the `~/.rrc` directory. If the directory does not exist, Ferminal can clone the template repository automatically. When `nm` is used without a template name, it checks for `~/.rrc` and offers to update it. The template repository is on:
 
 **[RRC Repository](https://github.com/RangS-1/RRC)**
 

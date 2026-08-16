@@ -34,7 +34,7 @@ def check():
     print(Fore.YELLOW + "[!] " + Fore.WHITE, end="")
 
 def main():
-    print("Ferminal v1.4.1")
+    print("Ferminal v1.4.2")
     print("(c) RangS. All rights reserved\n")
     while True:
                 
