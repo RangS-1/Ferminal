@@ -70,6 +70,8 @@ def main():
         elif command[:2] == "d ":
             if not os.path.exists(command[2:]):
                 print("Directory not found!\n")
+            elif os.path.isdir(command[2:]) == False:
+                print("Not a Directory!\n")
             else:
                 os.chdir(command[2:])
         elif command[:2] == "k ":
