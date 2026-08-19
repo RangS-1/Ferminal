@@ -132,15 +132,15 @@ def main():
         elif command[:3] == "gia":
             git_add = os.system(f'git add {command[4:]}')
         elif command[:3] == "gis":
-            git_stat = os.system(f'git status "{command[6:]}"')
+            git_stat = os.system(f'git status "{command[3:]}"')
         elif command[:3] == "gic":
             git_clone = os.system(f'git clone {command[3:]}')
         elif command[:3] == "gin":
             git_init = os.system('git init')
         elif command[:3] == "gib":
-            git_branch = os.system(f'git branch {command[3:]}')
-        elif command[:3] == "gibd":
-            git_branch = os.system(f'git branch -d {command[3:]}')
+            git_branch = os.system(f'git branch {command[4:]}')
+        elif command[:4] == "gibd":
+            git_branch = os.system(f'git branch -d {command[5:]}')
         elif command[:3] == "gip":
             git_pull = os.system(f'git pull {command[3:]}')
         elif command[:3] == "gih":
@@ -156,13 +156,13 @@ def main():
         elif command[:3] == 'gie':
             git_merge = os.system(f'git merge {command[3:]}')
         elif command[:3] == 'gio':
-            git_checkout = os.system(f'git checkout {command[6:]}')
-        elif command[:3] == 'giob':
-            git_checkout = os.system(f'git checkout -b {command[6:]}')
+            git_checkout = os.system(f'git checkout {command[4:]}')
+        elif command[:4] == 'giob':
+            git_checkout = os.system(f'git checkout -b {command[5:]}')
         elif command[:3] == 'gig':
-            git_tag = os.system(f'git tag {command[3:]}')
+            git_tag = os.system(f'git tag {command[4:]}')
         elif command[:3] == 'gid':
-            git_tag = os.system(f'git diff {command[3:]}')
+            git_tag = os.system(f'git diff {command[4:]}')
         elif command == 'girh':
             git_tag = os.system(f'git reset HEAD')
         elif command[:4] == 'girs':
@@ -212,6 +212,15 @@ def main():
                 os.system("cp -r ~/.rrc/React/ .")
                 success()
                 print("React Project Template copied successfully.")
+            elif command[3:] == f"lrv{command[6:]}":
+                if command[6:] == "":
+                    check()
+                    print("Please use version, example: lrv12 for laravel 12")
+                else:
+                    check()
+                    print("Making laravel project...")
+                    os.system(f"composer create-project laravel/laravel:^{command[6:]} laravel")
+                    success
             else:
                 check()
                 update = input("Would you like to update it? (y/n): ")
