@@ -1,6 +1,6 @@
 [project]
 name = "ferminal"
-version = "1.4.2"
+version = "1.4.3"
 description = "Custom Wrapper CLI to make your work faster"
 authors = [
     {name="RangS"}
