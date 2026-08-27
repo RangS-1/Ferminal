@@ -40,8 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-link');
   const sidebarLinks = document.querySelectorAll('.sidebar-item-link');
+  const isNewsPage = currentPath.includes('/news/');
+  const isAboutPage = currentPath.includes('/about/');
+  const isDocsPage = currentPath.includes('/docs/') && !currentPath.endsWith('/docs/') && !isNewsPage && !isAboutPage;
 
   // Highlight Navbar Items
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     // Home page check
@@ -49,9 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/docs/') && !currentPath.includes('/about/')) {
         link.classList.add('active');
       }
-    } else if (currentPath.includes('/docs/') && href.includes('/docs/')) {
+    } else if (isDocsPage && href.includes('/docs/')) {
       link.classList.add('active');
-    } else if (currentPath.includes('/about/') && href.includes('/about/')) {
+    } else if (isNewsPage && href.includes('/news/')) {
+      link.classList.add('active');
+    } else if (isAboutPage && href.includes('/about/')) {
       link.classList.add('active');
     }
   });
