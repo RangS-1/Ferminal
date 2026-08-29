@@ -150,9 +150,9 @@ def main():
         elif command[:3] == 'gil':
             log = os.system("git log")
         elif command[:3] == 'gif':
-            git_fetch = os.system(f'git fetch {command[6:]}')
+            git_fetch = os.system(f'git fetch {command[4:]}')
         elif command[:3] == 'gir':
-            git_remote = os.system(f'git remote {command[6:]}')
+            git_remote = os.system(f'git remote {command[4:]}')
         elif command[:3] == 'gie':
             git_merge = os.system(f'git merge {command[3:]}')
         elif command[:3] == 'gio':
@@ -220,7 +220,7 @@ def main():
                     check()
                     print("Making laravel project...")
                     os.system(f"composer create-project laravel/laravel:^{command[6:]} laravel")
-                    success
+                    success()
             else:
                 check()
                 update = input("Would you like to update it? (y/n): ")
