@@ -8,7 +8,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.4.3-purple)](https://github.com/RangS-1/Ferminal/releases)
+[![Version](https://img.shields.io/badge/version-1.4.4-purple)](https://github.com/RangS-1/Ferminal/releases)
 
 **A lightweight custom terminal and CLI wrapper built with Python.**
 
