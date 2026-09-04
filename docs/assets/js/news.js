@@ -43,6 +43,44 @@ const newsData = [
         This is ferminal v1.3.3 package for freebsd system. You can also check the <a href="https://github.com/RangS-1/Ferminal/releases/tag/v1.3.3" target="_blank" rel="noopener noreferrer">GitHub releases page</a> for more information.
       </p>
     `
+  },
+  {
+    id: 5,
+    title: "Laravel Wrapper for Ferminal",
+    link: "https://github.com/RangS-1/Ferminal/releases/tag/v1.4.3",
+    date: "2026-09-01",
+    content: `
+      <p>We have created a Laravel wrapper for Ferminal, making it easier to integrate with Laravel applications. To use it, simply run:</p>
+      <div class="arch-code-block">
+        <code>nm lrv&lt;version&gt;</code>
+      </div>
+      <p>Example if you want to install laravel 12:</p>
+      <div class="arch-code-block">
+        <code>nm lrv12</code>
+      </div>
+      <p>
+        Remember to install composer dependencies first.
+      </p>
+    `
+  },
+  {
+    id: 6,
+    title: "Ferminal now available on Winget repository",
+    link: "https://github.com/microsoft/winget-pkgs/",
+    date: "2026-09-01",
+    content: `
+      <p>We finally add ferminal to winget repository. If you are using windows, now you can just type:</p>
+      <div class="arch-code-block">
+        <code>winget install ferminal</code>
+      </div>
+      <p>More explicitly use:</p>
+      <div class="arch-code-block">
+        <code>winget install --id RangS.Ferminal</code>
+      </div>
+      <p>
+        This is ferminal v1.3.3 package for windows system. You can also check the <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/r/RangS/Ferminal/">GitHub winget-pkgs page</a> for more information and see the yaml file.
+      </p>
+    `
   }
 ];
 
@@ -57,7 +95,10 @@ function renderNewsList() {
   const isNewsPage = window.location.pathname.includes('/news/');
   const pathPrefix = isNewsPage ? '../' : '';
 
-  const htmlContent = sortedNews.map(item => {
+  // Homepage displays only top 3 news items; News page displays all items
+  const itemsToRender = isNewsPage ? sortedNews : sortedNews.slice(0, 3);
+
+  const htmlContent = itemsToRender.map(item => {
     let href = item.link;
     let targetAttr = '';
 
